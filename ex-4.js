@@ -373,5 +373,22 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+function countMember(transaction) {
+  const members = transaction
+  .filter(function (bill) {
+    return bill.member !== null;
+  })
+  .map(function (bill) {
+    return bill.member.name;
+  });
+
+  const duplicateNames = members.filter(function(name, index) {
+    return members.indexOf(name) === index;
+  });
+
+  return ` "Unique Members Count: ${duplicateNames.length}"`
+}
+
+const billMembers = countMember(bills);
+console.log(countMember(bills))
+

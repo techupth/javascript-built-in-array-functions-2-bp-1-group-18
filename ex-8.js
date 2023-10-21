@@ -373,6 +373,5 @@ const bills = [
     },
 ];
 
-// Start coding here
+/// เดี๋ยวมาทำ ขอข้ามก่อน ไม่ทันครับ
 
-const totalPaidByLocation;

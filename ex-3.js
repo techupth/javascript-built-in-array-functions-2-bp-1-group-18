@@ -373,5 +373,19 @@ const bills = [
   },
 ];
 
-// Start coding here
-const billMembers;
+
+function getMemberName(transaction) {
+  const memberName = transaction
+.filter(function (bill) {
+    return bill.member !== null;
+  })
+  .map(function (bill) {
+    return bill.member.name;
+  });
+
+return memberName;
+}
+
+const billMembers = getMemberName(bills);
+console.log(getMemberName(bills))
+
